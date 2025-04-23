@@ -19,17 +19,17 @@ class Mycomplex():
         return ob5
     def division(self,c2):
         ob6 = Mycomplex(0, 0)
-        dem = (self.r * c2.r) + (self.i * c2.i)
-        ob6.r = ((self.r * c2.r) - (self.i * c2.i)) / dem
-        ob6.i = ((self.r * c2.i) + (self.i * c2.r)) / dem
+        dem = c2.r**2 + c2.i**2
+        ob6.r = ((self.r * c2.r) + (self.i * c2.i)) / dem
+        ob6.i = ((self.r * c2.i) - (self.i * c2.r)) / dem
         return ob6
-    def printN(self):
+    def display(self):
         print(self.r,"+ j",self.i)
 ob1 = Mycomplex(10, 20)
-ob1.printN()
+ob1.display()
 ob2 = Mycomplex(15, 12)
-ob2.printN()
-ob1.addition(ob2).printN()
-ob1.substraction(ob2).printN()
-ob1.multiplication(ob2).printN()
-ob1.division(ob2).printN()
+ob2.display()
+ob1.addition(ob2).display()
+ob1.substraction(ob2).display()
+ob1.multiplication(ob2).display()
+ob1.division(ob2).display()
